@@ -9,21 +9,37 @@
 from PyQt6 import QtCore, QtGui, QtWidgets
 
 
-class Ui_Dialog(object):
-    def setupUi(self, Dialog):
-        Dialog.setObjectName("Dialog")
-        Dialog.resize(400, 300)
-        self.buttonBox = QtWidgets.QDialogButtonBox(parent=Dialog)
+class Ui_ImageDialog(object):
+    def setupUi(self, ImageDialog):
+        ImageDialog.setObjectName("ImageDialog")
+        ImageDialog.resize(400, 300)
+        self.buttonBox = QtWidgets.QDialogButtonBox(parent=ImageDialog)
         self.buttonBox.setGeometry(QtCore.QRect(30, 240, 341, 32))
         self.buttonBox.setOrientation(QtCore.Qt.Orientation.Horizontal)
         self.buttonBox.setStandardButtons(QtWidgets.QDialogButtonBox.StandardButton.Cancel|QtWidgets.QDialogButtonBox.StandardButton.Ok)
         self.buttonBox.setObjectName("buttonBox")
+        self.pushButton = QtWidgets.QPushButton(parent=ImageDialog)
+        self.pushButton.setGeometry(QtCore.QRect(30, 30, 93, 28))
+        self.pushButton.setObjectName("pushButton")
+        self.pushButton_2 = QtWidgets.QPushButton(parent=ImageDialog)
+        self.pushButton_2.setGeometry(QtCore.QRect(110, 120, 93, 28))
+        self.pushButton_2.setObjectName("pushButton_2")
+        self.checkBox = QtWidgets.QCheckBox(parent=ImageDialog)
+        self.checkBox.setGeometry(QtCore.QRect(40, 200, 81, 20))
+        self.checkBox.setObjectName("checkBox")
+        self.checkBox_2 = QtWidgets.QCheckBox(parent=ImageDialog)
+        self.checkBox_2.setGeometry(QtCore.QRect(40, 230, 81, 20))
+        self.checkBox_2.setObjectName("checkBox_2")
 
-        self.retranslateUi(Dialog)
-        self.buttonBox.accepted.connect(Dialog.accept) # type: ignore
-        self.buttonBox.rejected.connect(Dialog.reject) # type: ignore
-        QtCore.QMetaObject.connectSlotsByName(Dialog)
+        self.retranslateUi(ImageDialog)
+        self.buttonBox.accepted.connect(ImageDialog.accept) # type: ignore
+        self.buttonBox.rejected.connect(ImageDialog.reject) # type: ignore
+        QtCore.QMetaObject.connectSlotsByName(ImageDialog)
 
-    def retranslateUi(self, Dialog):
+    def retranslateUi(self, ImageDialog):
         _translate = QtCore.QCoreApplication.translate
-        Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
+        ImageDialog.setWindowTitle(_translate("ImageDialog", "Dialog"))
+        self.pushButton.setText(_translate("ImageDialog", "PushButton"))
+        self.pushButton_2.setText(_translate("ImageDialog", "PushButton"))
+        self.checkBox.setText(_translate("ImageDialog", "CheckBox"))
+        self.checkBox_2.setText(_translate("ImageDialog", "CheckBox"))

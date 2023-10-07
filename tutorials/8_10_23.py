@@ -1,10 +1,10 @@
 import sys
 from PyQt6.QtWidgets import QApplication, QDialog
-from ui_imagedialog import Ui_Dialog
+from ui_imagedialog import Ui_ImageDialog
 
 app = QApplication(sys.argv)
 window = QDialog()
-ui = Ui_Dialog()
+ui = Ui_ImageDialog()
 ui.setupUi(window)
 
 window.show()
